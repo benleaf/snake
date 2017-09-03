@@ -2,7 +2,7 @@
 
 import random, msvcrt, time #just the regular defult python inports
 
-snakeX = [0,1,2]
+snakeX = [0,1,2] #a few to many globle variables
 snakeY = [0,0,0]
 foodX = 2
 foodY = 0
@@ -22,7 +22,7 @@ def drawGrid(snakeX,snakeY,foodX,foodY,boardY,boardX):#sistomaticly prints out a
         for x in range (boardX):                      #when x and y are = to that of the food it will print "$"
             snakeSpot = False
             for i in range(len(snakeX)):
-                if y == snakeY[i] and x == snakeX[i]:
+                if y == snakeY[i] and x == snakeX[i]: #nested for loop  could be avoided by printing the grid in one line with end='' \n
                     print("H",end='')
                     snakeSpot = True
                     break
